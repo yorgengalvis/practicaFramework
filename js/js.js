@@ -9,18 +9,21 @@ $("#contacto").click(function(event) {
 
 $("#partidos").click(function(event) {
     $("#contenedor").load('seleccion/partido.html');
+    leerjson();
 });
 
+function leerjson(){
+    var part="";
 
-
-var part="";
-
-$.getJSON('../data/partidos.json',function(datos){
-    $("#contenido-tabla").html('');
-    $.each(datos["partidos"],function(idx,partido){
-        $("#contenido-tabla").append("<tr>"+"<td>"+partido[fecha]+"</td><td>"+partido["equipo1"]+"</td>"+
-        +partido["equipo2"]+"</td>"+
-    "</tr>");
+    $.getJSON('../data/partidos.json',function(datos){
+        $("#contenido-tabla").html('');
+        $.each(datos["partidos"],function(idx,partido){
+            $("#contenido-tabla").append("<tr>"+"<td>"+partido[fecha]+"</td><td>"+partido["equipo1"]+"</td>"+
+            +partido["equipo2"]+"</td>"+
+        "</tr>");
+        });
     });
-});
+}
+
+
 
