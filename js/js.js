@@ -16,9 +16,9 @@ var part="";
 $.getJSON('partidos.json',function(datos){
     $("#contenido-tabla").html('');
     $.each(datos["partidos"],function(idx,partido){
-        $("#contenido").append("<tr>"+"<td>"+partido[fecha]+"</td><td>"+partido["equipo1"]+"</td><td>
+        $("#contenido").append("<tr>"+"<td>"+partido[fecha]+"</td><td>"+partido["equipo1"]+"</td>"+
         +partido["equipo2"]+"</td>"+
-    </tr>");
+    "</tr>");
     });
 });
 
