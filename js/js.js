@@ -8,7 +8,7 @@ $("#contacto").click(function(event) {
 
 
 $("#partidos").click(function(event) {
-    $("#contenedor").load('partidos.html');
+    $("#contenedor").load('partido.html');
 });
 
 
