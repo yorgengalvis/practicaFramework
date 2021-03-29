@@ -15,10 +15,10 @@ $("#partidos").click(function(event) {
 function leerjson(){
     var part="";
 
-    $.getJSON('../data/partidos.json',function(datos){
+    $.getJSON('data/partidos.json',function(datos){
         $("#contenido-tabla").html('');
         $.each(datos["partidos"],function(idx,partido){
-            $("#contenido-tabla").append("<tr>"+"<td>"+partido[fecha]+"</td><td>"+partido["equipo1"]+"</td>"+
+            $("#contenido-tabla").append("<tr>"+"<td>"+partido["fecha"]+"</td><td>"+partido["equipo1"]+"</td>"+
             +partido["equipo2"]+"</td>"+
         "</tr>");
         });
