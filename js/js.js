@@ -13,7 +13,7 @@ $("#partidos").click(function(event) {
 
 var part="";
 
-$.getJSON('partidos.json',function(datos){
+$.getJSON('../partidos.json',function(datos){
     $("#contenido-tabla").html('');
     $.each(datos["partidos"],function(idx,partido){
         $("#contenido").append("<tr>"+"<td>"+partido[fecha]+"</td><td>"+partido["equipo1"]+"</td>"+
